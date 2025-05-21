@@ -49,7 +49,12 @@ function countNumbers (variable) {
             case "=":
                 try {
                     let result = CalcScreen.innerText.replace(/÷/g, "/");
-                    CalcScreen.innerText = eval(result);
+                    result = eval(result);
+                    if (!result === isNaN) {
+                        CalcScreen.innerText = result;
+                    } else {
+                        CalcScreen.innerText = "0";
+                    }
                 } catch (e) {
                     CalcScreen.innerText = "Error";
                 }
