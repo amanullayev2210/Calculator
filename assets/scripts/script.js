@@ -50,7 +50,7 @@ function countNumbers (variable) {
                 try {
                     let result = CalcScreen.innerText.replace(/÷/g, "/");
                     result = eval(result);
-                    if (!result === isNaN) {
+                    if (!isNaN(result)) {
                         CalcScreen.innerText = result;
                     } else {
                         CalcScreen.innerText = "0";
