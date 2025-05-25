@@ -21,7 +21,7 @@ function countNumbers (variable) {
 
                 if (buffer.length === 0) {
                     return;
-                } else if (buffer.length === 1) {
+                } else if (buffer.length === 1 || buffer == "Error") {
                     buffer = "0";
                 } else {
                     let count = [...buffer];

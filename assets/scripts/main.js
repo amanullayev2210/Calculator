@@ -1,20 +1,98 @@
+const buttons = document.querySelectorAll(".calc-row-btn");
+
+
 document.addEventListener("keydown", (evt) => {
     evt.preventDefault();
+    let symbol;
         switch (evt.key) {
             case "Enter":
-                countNumbers("=");
-                break;
+                symbol = "="               
+                buttons.forEach(button => {
+                    if (button.textContent === symbol) {
+                        button.classList.add("active");
+                        countNumbers(symbol);
+
+                    setTimeout(() => {
+                        button.classList.remove("active");
+                    }, 500)}});
+                    
+                    break;
             case "Backspace":
-                countNumbers("←");
-                break;
+                symbol = "←"                
+                buttons.forEach(button => {
+                    if (button.textContent === symbol) {
+                        button.classList.add("active");
+                        countNumbers(symbol);
+
+                    setTimeout(() => {
+                        button.classList.remove("active");
+                    }, 500)}});
+                    
+                    break;
             case "Delete":
-                countNumbers("C");
-                break;
+                symbol = "C"       
+
+                buttons.forEach(button => {
+                    if (button.textContent === symbol) {
+                        button.classList.add("active");
+                        countNumbers(symbol);
+
+                    setTimeout(() => {
+                        button.classList.remove("active");
+                    }, 500)}});
+                    
+                    break;
+            case "c":
+                symbol = "C"       
+
+                buttons.forEach(button => {
+                    if (button.textContent === symbol) {
+                        button.classList.add("active");
+                        countNumbers(symbol);
+
+                    setTimeout(() => {
+                        button.classList.remove("active");
+                    }, 500)}});
+                    
+                    break;
+            case "C":
+                symbol = "C"       
+
+                buttons.forEach(button => {
+                    if (button.textContent === symbol) {
+                        button.classList.add("active");
+                        countNumbers(symbol);
+
+                    setTimeout(() => {
+                        button.classList.remove("active");
+                    }, 500)}});
+                    
+                    break;
             case "/":
-                countNumbers("÷");
-            break;
-        default:
-            countNumbers(evt.key);
+                symbol = "÷";           
+                
+                buttons.forEach(button => {
+                    if (button.textContent === symbol) {
+                        button.classList.add("active");
+                        countNumbers(symbol);
+
+                    setTimeout(() => {
+                        button.classList.remove("active");
+                    }, 500)}});
+                    
+                    break;
+            default:
+                symbol = evt.key
+                buttons.forEach(button => {
+                    if (button.textContent === symbol) {
+                        button.classList.add("active");
+                        countNumbers(symbol);
+
+                    setTimeout(() => {
+                        button.classList.remove("active");
+                    }, 500)}});
+                    
+                    break;
 }})
 
 
@@ -27,7 +105,7 @@ function countNumbers (variable) {
             case "←":
                 let buffer = CalcScreen.innerText;
                 
-                if (buffer.length === 0) {
+                if (buffer.length === 0 || buffer == "Error") {
                     return;
                 } else if (buffer.length === 1) {
                     buffer = "0";
