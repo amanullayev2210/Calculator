@@ -2,6 +2,7 @@ const CalcScreen = document.getElementById("calc-screen-inner");
 const Calcbuttons = document.querySelectorAll(".calc-btn");
 
 let previousNum;
+let lastSymbol = CalcScreen.innerText.slice(-1);
 
 
 Calcbuttons.forEach(button => {
@@ -32,20 +33,41 @@ function countNumbers (variable) {
                 break;
 
             case "+":
-                CalcScreen.innerText += "+";
+                lastSymbol = CalcScreen.innerText.slice(-1);
+                if (!isNaN(lastSymbol)) {
+                    CalcScreen.innerText += "+";
+                } else {
+                    CalcScreen.innerText = CalcScreen.innerText.slice(0, -1) + "+";
+                }
                 break;
 
             case "-":
-                CalcScreen.innerText += "-";
+                lastSymbol = CalcScreen.innerText.slice(-1);
+                if (!isNaN(lastSymbol)) {
+                    CalcScreen.innerText += "-";
+                } else {
+                    CalcScreen.innerText = CalcScreen.innerText.slice(0, -1) + "-";
+                }
                 break;
 
             case "÷":
-                CalcScreen.innerText += "÷";
+                lastSymbol = CalcScreen.innerText.slice(-1);
+                if (!isNaN(lastSymbol)) {
+                    CalcScreen.innerText += "÷";
+                } else {
+                    CalcScreen.innerText = CalcScreen.innerText.slice(0, -1) + "÷";
+                }
                 break;
 
             case "*":
-                CalcScreen.innerText += "*";
+                lastSymbol = CalcScreen.innerText.slice(-1);
+                if (!isNaN(lastSymbol)) {
+                    CalcScreen.innerText += "*";
+                } else {
+                    CalcScreen.innerText = CalcScreen.innerText.slice(0, -1) + "*";
+                }
                 break;
+                
             case "=":
                 try {
                     let result = CalcScreen.innerText.replace(/÷/g, "/");

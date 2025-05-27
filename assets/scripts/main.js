@@ -1,4 +1,8 @@
 const buttons = document.querySelectorAll(".calc-row-btn");
+const CalcDisplay= document.getElementById("calc-screen-inner")
+
+
+let lastCount = CalcDisplay.innerText.slice(-1);
 
 
 document.addEventListener("keydown", (evt) => {
@@ -118,20 +122,41 @@ function countNumbers (variable) {
                 break;
 
             case "+":
-                CalcScreen.innerText += "+";
+                lastCount = CalcScreen.innerText.slice(-1);
+                if (!isNaN(lastCount)) {
+                    CalcScreen.innerText += "+";
+                } else {
+                    CalcScreen.innerText = CalcScreen.innerText.slice(0, -1) + "+";
+                }
                 break;
 
             case "-":
-                CalcScreen.innerText += "-";
+                lastCount = CalcScreen.innerText.slice(-1);
+                if (!isNaN(lastCount)) {
+                    CalcScreen.innerText += "-";
+                } else {
+                    CalcScreen.innerText = CalcScreen.innerText.slice(0, -1) + "-";
+                }
                 break;
 
             case "÷":
-                CalcScreen.innerText += "÷";
+                lastCount = CalcScreen.innerText.slice(-1);
+                if (!isNaN(lastCount)) {
+                    CalcScreen.innerText += "÷";
+                } else {
+                    CalcScreen.innerText = CalcScreen.innerText.slice(0, -1) + "÷";
+                }
                 break;
 
             case "*":
-                CalcScreen.innerText += "*";
+                lastCount = CalcScreen.innerText.slice(-1);
+                if (!isNaN(lastCount)) {
+                    CalcScreen.innerText += "*";
+                } else {
+                    CalcScreen.innerText = CalcScreen.innerText.slice(0, -1) + "*";
+                }
                 break;
+
             case "=":
                 try {
                     let result = CalcScreen.innerText.replace(/÷/g, "/");
