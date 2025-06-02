@@ -110,7 +110,7 @@ body {
 }  */
 
 .calc-row-btn.active {
-    animation: animate .5s ease forwards;
+    animation: animate .3s ease forwards;
 }
 
 .calc-symbol-basis {
@@ -183,6 +183,11 @@ body {
     .calc-row-btn:active {
         background-color: #ffef7B;
     } 
+
+    .calc-section {
+        height: 50%;
+        align-self: center;
+    }
 }
 
 
