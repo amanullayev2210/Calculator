@@ -96,7 +96,7 @@ body {
     background: #d72880;
 }
 
-.calc-row-btn:last-child:hover {
+/* .calc-row-btn:last-child:hover {
     background: inherit;
     color: inherit;
 }
@@ -107,7 +107,7 @@ body {
 
 .calc-row-btn:active {
     background-color: #ffef7B;
-} 
+}  */
 
 .calc-row-btn.active {
     animation: animate .5s ease forwards;
