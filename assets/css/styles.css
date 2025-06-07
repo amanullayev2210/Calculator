@@ -82,7 +82,7 @@ body {
     font-family: inherit;
     font-size: 24px;
     height: 55px;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
 }
 
 
@@ -95,7 +95,7 @@ body {
     box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
     color: #fff;
     background: #d72880;
-    transition: all 0.3 ease;
+    transition: all .3 ease;
 }
 
 /* .calc-row-btn:last-child:hover {
@@ -190,9 +190,22 @@ body {
         transform: scale(0.98);
     } 
 
+    .calc-screen {
+        font-size: 38px;
+    }
+
+    .calc-wrapper {
+        padding: 20px;
+    }
+
     .calc-section {
-        height: 60%;
-        align-self: center;
+        padding-inline: 10px;
+        align-self: end;
+    }
+
+    .calc-row-btn {
+        font-size: 28px;
+        height: 65px;
     }
 }
 
