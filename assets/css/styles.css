@@ -82,6 +82,7 @@ body {
     font-family: inherit;
     font-size: 24px;
     height: 55px;
+    transition: all 0.3s ease;
 }
 
 
@@ -94,6 +95,7 @@ body {
     box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
     color: #fff;
     background: #d72880;
+    transition: all 0.3 ease;
 }
 
 /* .calc-row-btn:last-child:hover {
@@ -174,6 +176,8 @@ body {
     .calc-row-btn:last-child:active {
         background: inherit;
         color: inherit;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+        transform: scale(0.96);
     }
  
     .calc-row-btn:active {
@@ -181,7 +185,9 @@ body {
     }
 
     .calc-row-btn:active {
-        background-color: #ffef7B;
+        background-color: rgba(255, 255, 200, 0.85);
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+        transform: scale(0.98);
     } 
 
     .calc-section {
