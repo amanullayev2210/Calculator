@@ -155,6 +155,8 @@ body {
 @media only screen and (max-width: 840px) and (min-width:768px) {
     .calc-section {
         flex-basis: 600px;
+        height: auto
+        ;
     }
 
     .calc-row-btn:last-child:active {
@@ -195,13 +197,15 @@ body {
     }
 
     .calc-section {
+        margin-bottom: 20px;
         padding-inline: 10px;
+        height: auto;
         align-self: end;
     }
 
     .calc-row-btn {
-        font-size: 26px;
-        height: 60px;
+        font-size: 28px;
+        height: 64px;
     }
 }
 
