@@ -1,6 +1,6 @@
 # Amazing Calculator
 
-![Calculator Screenshot](assets/screenshot.png)
+![Calculator Screenshot](assets/images/image.png)
 
 **Amazing Calculator** — bu zamonaviy, foydalanuvchi uchun qulay interfeysga ega bo'lgan veb-kalkulyator. U HTML, CSS va JavaScript texnologiyalaridan foydalangan holda ishlab chiqilgan va asosiy arifmetik amallarni bajarish imkonini beradi.
 
