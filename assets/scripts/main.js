@@ -167,7 +167,14 @@ function countNumbers (variable) {
                         CalcScreen.innerText = "0";
                     }
                 } catch (e) {
+                    const calcScreenInterval = setInterval(() => {
                     CalcScreen.innerText = "Error";
+                    }, 1);
+
+                    setTimeout(() => {
+                        CalcScreen.innerText = "0";
+                        clearInterval(calcScreenInterval);
+                    }, 5000);
                 }
                 break;
 
